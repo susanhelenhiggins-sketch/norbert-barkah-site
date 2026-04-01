@@ -1276,6 +1276,16 @@ p {
   gap: 2rem;
 }
 
+.ig-embed-wrapper {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.ig-embed-wrapper .instagram-media {
+  margin: 0 !important;
+}
+
 /* ============================================
    KIT / CONVERTKIT FORM OVERRIDES
    ============================================ */
