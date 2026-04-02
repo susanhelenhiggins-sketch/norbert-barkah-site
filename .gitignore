@@ -1,0 +1,5 @@
+# Exclude original image backups
+images/originals-backup/
+
+# macOS
+.DS_Store
