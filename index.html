@@ -88,11 +88,32 @@
   <section class="section story-world" style="padding: clamp(2.5rem, 5vw, 4rem) 0;">
     <div class="container container--narrow text-center">
       <div class="fade-in">
-        <p style="font-family: var(--font-display); font-size: clamp(1.15rem, 2.2vw, 1.45rem); font-style: italic; color: var(--gold-glow); line-height: 1.7; margin-bottom: 1rem;">"After a rough day her stories bring me back to a calmer, better world."</p>
-        <p style="color: var(--sage-light); font-size: 0.9rem;">Mike K., Amazon Verified Purchase</p>
+        <div id="homepage-quote">
+          <p id="quote-text" style="font-family: var(--font-display); font-size: clamp(1.15rem, 2.2vw, 1.45rem); font-style: italic; color: var(--gold-glow); line-height: 1.7; margin-bottom: 1rem;"></p>
+          <p id="quote-author" style="color: var(--sage-light); font-size: 0.9rem;"></p>
+        </div>
       </div>
     </div>
   </section>
+
+  <script>
+    (function() {
+      var reviews = [
+        { text: "I am a huge fan of Norbert and his message of kindness on IG so I had to get this book. It was meant to be a gift for my best friend for her preschool classroom but I couldn't part with it once I opened it up. The message and the pictures. It just warmed my heart.", author: "Marisa D., Amazon Verified Purchase" },
+        { text: "After a rough day her stories bring me back to a calmer, better world. So looking forward to their next book!", author: "Mike K., Amazon Verified Purchase" },
+        { text: "This is a beautifully written story about kindness and forgiveness and lastly letting go. This book shows how letting go leads to better things in life. A must have for any classroom.", author: "Jeff E., Amazon Verified Purchase" },
+        { text: "This is an incredible lesson for kids and adults of all ages. The message of kindness and concern for others is clear and beautifully told. The story and illustrations bring joy!", author: "Betty, Amazon Verified Purchase" },
+        { text: "The perfect children's book. The beautiful illustrations and lovely story teaches young children love, compassion and empathy. The perfect bedtime story.", author: "Amazon Customer, Verified Purchase" },
+        { text: "An excellent story with a great message for children and adults. Her illustrations will delight children and hold their interest.", author: "Ann Dean, Amazon Verified Purchase" },
+        { text: "LOVE Norbert Barkah. Susan writes and teaches us a GREAT story, always on TikTok and her writing. We can all learn from Norbert Barkah and Susan. Great for teachers and everyone.", author: "Kathleen Adams, Amazon Verified Purchase" },
+        { text: "What an absolutely lovely tale written by Mama Sue to share with the whole family. My daughter loved it, so did I!", author: "Lenny, Amazon Verified Purchase" },
+        { text: "Fabulous book, great story and illustrations. I 100% recommend this book. Kids and adults will love Norbert and Mama Sue.", author: "Heidi W., United Kingdom" }
+      ];
+      var pick = reviews[Math.floor(Math.random() * reviews.length)];
+      document.getElementById('quote-text').textContent = '\u201C' + pick.text + '\u201D';
+      document.getElementById('quote-author').textContent = pick.author;
+    })();
+  </script>
 
   <!-- ====== ENCHANTED FOREST ====== -->
   <section class="section story-world">
