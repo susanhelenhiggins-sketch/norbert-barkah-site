@@ -1,0 +1,5 @@
+# Exclude original image backups from version control
+images/originals-backup/
+
+# macOS system files
+.DS_Store
