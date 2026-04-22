@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Norbert Barkah</title>
+  <meta name="description" content="Something new is coming to the forest. Sign up to be the first to know.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --forest-deep: #2C4A3E;
+      --gold-glow: #C4A35A;
+      --cream: #FAF6F0;
+      --sage: #7A9E8E;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Nunito', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      background: linear-gradient(160deg, var(--forest-deep), #1a3028);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      font-family: var(--font-body);
+      color: var(--cream);
+      text-align: center;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 3rem;
+    }
+
+    .logo-wrap img {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .logo-wrap span {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: var(--cream);
+      letter-spacing: 0.05em;
+    }
+
+    .logo-wrap span em {
+      color: var(--gold-glow);
+      font-style: normal;
+    }
+
+    .eyebrow {
+      font-family: var(--font-display);
+      font-style: italic;
+      color: var(--gold-glow);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      margin-bottom: 1rem;
+      letter-spacing: 0.03em;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 600;
+      color: var(--cream);
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      max-width: 700px;
+    }
+
+    .tagline {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      color: rgba(250, 246, 240, 0.8);
+      line-height: 1.7;
+      max-width: 520px;
+      margin: 0 auto 3rem;
+    }
+
+    .signup-wrap {
+      width: 100%;
+      max-width: 480px;
+    }
+
+    .signup-label {
+      font-family: var(--font-display);
+      font-style: italic;
+      color: var(--gold-glow);
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo-wrap">
+    <img src="images/logo.jpg" alt="Norbert Barkah logo">
+    <span>Norbert <em>Barkah</em></span>
+  </div>
+
+  <p class="eyebrow">Stories, kindness, and a little forest magic</p>
+
+  <h1>Something New is Coming to the Forest</h1>
+
+  <p class="tagline">Norbert and Mama Sue are working on something beautiful. Sign up below and you will be the first to know when it arrives.</p>
+
+  <div class="signup-wrap">
+    <p class="signup-label">Be the first to know</p>
+    <script async data-uid="3c4c1e8b83" src="https://norbert-barkah.kit.com/3c4c1e8b83/index.js"></script>
+  </div>
+
+</body>
+</html>

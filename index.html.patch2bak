@@ -20,17 +20,34 @@
 
   <!-- ====== HEADER ====== -->
   <header class="site-header">
-    <div class="header-inner" style="justify-content: center;">
+    <div class="header-inner">
       <a href="index.html" class="site-logo"><img src="images/logo.jpg" alt="Norbert Barkah logo" class="header-logo"> Norbert <span>Barkah</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="books.html">Books</a>
+        <a href="enchanted-forest.html">Enchanted Forest</a>
+        <a href="storytime.html">Storytime</a>
+        <a href="press.html">Press</a>
+        <a href="friends.html">Friends</a>
+        <a href="testimonials.html">Testimonials</a>
+                <a href="contact.html">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
   <!-- ====== HERO ====== -->
   <section class="hero">
     <div class="hero-content">
-      <p class="hero-eyebrow">Norbert&#8217;s Enchanted Forest</p>
-      <h1>Something New is Coming to the Forest</h1>
-      <p class="hero-tagline">Norbert and Mama Sue are working on something beautiful. Sign up below and you will be the first to know when it arrives.</p>
+      <p class="hero-eyebrow">Stories, kindness, and a little forest magic</p>
+      <h1>Welcome to Norbert&#8217;s Enchanted Forest</h1>
+      <p class="hero-tagline">A gentle place to land, listen to stories, and let your imagination wander somewhere kinder. With Norbert as your guide, the forest becomes a place of comfort, courage, and quiet belonging for children and grown-ups alike.</p>
+      <div class="hero-cta">
+        <a href="enchanted-forest.html" class="btn btn--primary">Enter the Forest</a>
+      </div>
     </div>
   </section>
 
@@ -45,7 +62,7 @@
           <h2>Meet Norbert</h2>
           <p>Norbert is the heart of this enchanted world. Gentle, watchful, and deeply comforting, he has a way of helping people feel calmer just by being himself. In storytime videos, he listens, settles in, and sometimes snores right in the middle of a tale, and somehow that simple sweetness has become part of the comfort people return for.</p>
           <p>He is real, not imagined, and that is part of what makes him different. Norbert loves children, tiny dogs, cats, and kindhearted people. He has a special gift for helping nervous little ones feel safe, and a quiet protectiveness that reminds me to pay attention when something feels off. In these stories, and in life, he is a steady guide, leading with gentleness, courage, and heart.</p>
-          <blockquote style="font-family: var(--font-display); font-style: italic; color: var(--forest-deep); font-size: 1.45rem; margin: 1.5rem 0 1rem; border-left: 3px solid var(--gold-glow); padding-left: 1rem;">"In the forest and in life, I have learned to trust the dog."</blockquote>
+          <blockquote style="font-family: var(--font-display); font-style: italic; color: var(--gold-glow); font-size: 1.45rem; margin: 1.5rem 0 1rem; border-left: 3px solid var(--gold-glow); padding-left: 1rem;">"In the forest and in life, I have learned to trust the dog."</blockquote>
           <a href="about.html" class="btn btn--dark-outline" style="margin-top: 1rem;">Meet Norbert</a>
         </div>
       </div>
@@ -63,7 +80,7 @@
           <p class="book-genre">Featured Book</p>
           <h2>The Tug of War Lesson</h2>
           <p class="section-subtitle" style="margin-bottom: 1rem;">The first published story in The Norbert Barkah Chronicles</p>
-          <p style="font-style: italic; color: var(--forest-deep); font-size: 1.2rem; margin-bottom: 1rem;">What if the bravest thing is choosing not to pull?</p>
+          <p style="font-style: italic; color: var(--gold-glow); font-size: 1.2rem; margin-bottom: 1rem;">What if the bravest thing is choosing not to pull?</p>
           <p>When Norbert worries he may meet a bully, he learns that real strength does not always mean fighting back. Sometimes it means listening to your heart, letting go of the rope, and making room for something softer to grow.</p>
           <p>As the first published story in The Norbert Barkah Chronicles, this book opens the door to a world of emotional truth, brave choices, kindness, and the quiet light we all carry within.</p>
           <div class="book-actions">
@@ -145,7 +162,7 @@
         <div class="fade-in">
           <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DC-WhaBMzdj/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 0 auto; max-width:540px; min-width:326px; padding:0; width:99.375%;"></blockquote>
           <script async src="//www.instagram.com/embed.js"></script>
-          <p style="text-align: center; margin-top: 1rem; font-style: italic; color: var(--forest-deep); font-size: 1.1rem;">The original Tug of War Lesson - the storytime video that inspired the book</p>
+          <p style="text-align: center; margin-top: 1rem; font-style: italic; color: var(--sage-light); font-size: 0.95rem;">The original Tug of War Lesson - the storytime video that inspired the book</p>
         </div>
       </div>
       <div class="text-center" style="margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center;">

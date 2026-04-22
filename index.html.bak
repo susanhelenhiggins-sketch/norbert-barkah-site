@@ -20,17 +20,34 @@
 
   <!-- ====== HEADER ====== -->
   <header class="site-header">
-    <div class="header-inner" style="justify-content: center;">
+    <div class="header-inner">
       <a href="index.html" class="site-logo"><img src="images/logo.jpg" alt="Norbert Barkah logo" class="header-logo"> Norbert <span>Barkah</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="books.html">Books</a>
+        <a href="enchanted-forest.html">Enchanted Forest</a>
+        <a href="storytime.html">Storytime</a>
+        <a href="press.html">Press</a>
+        <a href="friends.html">Friends</a>
+        <a href="testimonials.html">Testimonials</a>
+                <a href="contact.html">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
   <!-- ====== HERO ====== -->
   <section class="hero">
     <div class="hero-content">
-      <p class="hero-eyebrow">Norbert&#8217;s Enchanted Forest</p>
-      <h1>Something New is Coming to the Forest</h1>
-      <p class="hero-tagline">Norbert and Mama Sue are working on something beautiful. Sign up below and you will be the first to know when it arrives.</p>
+      <p class="hero-eyebrow">Stories, kindness, and a little forest magic</p>
+      <h1>Welcome to Norbert&#8217;s Enchanted Forest</h1>
+      <p class="hero-tagline">A gentle place to land, listen to stories, and let your imagination wander somewhere kinder. With Norbert as your guide, the forest becomes a place of comfort, courage, and quiet belonging for children and grown-ups alike.</p>
+      <div class="hero-cta">
+        <a href="enchanted-forest.html" class="btn btn--primary">Enter the Forest</a>
+      </div>
     </div>
   </section>
 
@@ -43,9 +60,9 @@
         </div>
         <div class="intro-text fade-in">
           <h2>Meet Norbert</h2>
-          <p>Norbert is the heart of this enchanted world. Gentle, watchful, and deeply comforting, he has a way of helping people feel calmer just by being himself. In storytime videos, he listens, settles in, and sometimes snores right in the middle of a tale, and somehow that simple sweetness has become part of the comfort people return for.</p>
-          <p>He is real, not imagined, and that is part of what makes him different. Norbert loves children, tiny dogs, cats, and kindhearted people. He has a special gift for helping nervous little ones feel safe, and a quiet protectiveness that reminds me to pay attention when something feels off. In these stories, and in life, he is a steady guide, leading with gentleness, courage, and heart.</p>
-          <blockquote style="font-family: var(--font-display); font-style: italic; color: var(--forest-deep); font-size: 1.45rem; margin: 1.5rem 0 1rem; border-left: 3px solid var(--gold-glow); padding-left: 1rem;">"In the forest and in life, I have learned to trust the dog."</blockquote>
+          <p class="section-subtitle">A gentle soul with a torn ear, a wise heart, and a way of making people feel at home</p>
+          <p>Norbert Barkah is the heart of this world. He is a gentle, intuitive dog with expressive eyes, a soft spirit, and a torn ear that feels like part of his story, too. People may first notice how handsome he is, but what stays with them is his presence. He listens. He feels. He seems to understand when a moment needs tenderness.</p>
+          <p>What began as reading stories to Norbert became something much bigger. His quiet attention helped open the door to storytime videos, enchanted forest tales, and a growing world of books and healing stories. He is not just the inspiration behind the work, he is part of the magic people come here to feel.</p>
           <a href="about.html" class="btn btn--dark-outline" style="margin-top: 1rem;">Meet Norbert</a>
         </div>
       </div>
@@ -60,14 +77,12 @@
           <img src="images/tug-of-war-lesson-cover.jpg" alt="The Tug of War Lesson book cover - a watercolor illustration of a girl and Norbert sharing a gentle moment by the water, by Susan Higgins">
         </div>
         <div class="book-details">
-          <p class="book-genre">Featured Book</p>
+          <p class="book-genre">Children's Picture Book</p>
           <h2>The Tug of War Lesson</h2>
-          <p class="section-subtitle" style="margin-bottom: 1rem;">The first published story in The Norbert Barkah Chronicles</p>
-          <p style="font-style: italic; color: var(--forest-deep); font-size: 1.2rem; margin-bottom: 1rem;">What if the bravest thing is choosing not to pull?</p>
-          <p>When Norbert worries he may meet a bully, he learns that real strength does not always mean fighting back. Sometimes it means listening to your heart, letting go of the rope, and making room for something softer to grow.</p>
-          <p>As the first published story in The Norbert Barkah Chronicles, this book opens the door to a world of emotional truth, brave choices, kindness, and the quiet light we all carry within.</p>
+          <p>The Tug of War Lesson is the story that started it all. When I first shared it as a storytime video with Norbert, viewers immediately began asking where they could buy the book. That response showed me this story had touched something real, and it became the spark that helped bring this work into the world in book form.</p>
+          <p>At its heart, this is a gentle story about emotional wisdom, kindness, and choosing peace over struggle. Told with warmth and simple truth, it invites children and the grown-ups who read with them to feel steadier, safer, and more connected to their own inner light.</p>
           <div class="book-actions">
-            <a href="books.html" class="btn btn--primary">See the Book</a>
+            <a href="books.html" class="btn btn--primary">Learn More</a>
             <a href="https://www.amazon.com/Tug-War-Lesson-Norbert-Barkah/dp/1945567627/" class="btn btn--dark-outline" target="_blank" rel="noopener">Where to Buy</a>
           </div>
         </div>
@@ -80,8 +95,8 @@
     <div class="container container--narrow text-center">
       <div class="fade-in">
         <div id="homepage-quote">
-          <p id="quote-text" style="font-family: var(--font-display); font-size: clamp(1.35rem, 2.5vw, 1.7rem); font-style: italic; color: var(--cream); line-height: 1.7; margin-bottom: 1rem;"></p>
-          <p id="quote-author" style="color: var(--sage-light); font-size: 1rem;"></p>
+          <p id="quote-text" style="font-family: var(--font-display); font-size: clamp(1.15rem, 2.2vw, 1.45rem); font-style: italic; color: var(--gold-glow); line-height: 1.7; margin-bottom: 1rem;"></p>
+          <p id="quote-author" style="color: var(--sage-light); font-size: 0.9rem;"></p>
         </div>
       </div>
     </div>
@@ -109,8 +124,9 @@
   <!-- ====== ENCHANTED FOREST ====== -->
   <section class="section story-world">
     <div class="container text-center">
-      <h2 class="fade-in">Step into the Enchanted Forest</h2>
-      <p class="fade-in" style="max-width: 680px; margin: 0 auto 1.5rem;">Deeper in the forest, Norbert is joined by Lyra, a tiny fairy whose kind are born without wings. Their wings begin to grow only when they witness true kindness. Lyra awakens when Norbert's bark breaks through the angry growls of a big dog bullying a tiny one. His courage and kindness call her into the world, and from that moment on, she follows him as his witness.</p>
+      <h2 class="fade-in">Enter the Enchanted Forest</h2>
+      <p class="section-subtitle fade-in">A story world rooted in kindness, courage, healing, and quiet light</p>
+      <p class="fade-in" style="max-width: 680px; margin: 0 auto 1rem;">The enchanted forest is where Norbert's deeper stories live. It is a place of glowing paths, gentle creatures, listening trees, and moments that help children and adults make sense of big feelings in soft, meaningful ways. These stories are written with heart, but they also carry deeper truths about grief, courage, friendship, and becoming who we really are.</p>
       <div class="world-features">
         <div class="world-feature fade-in">
           <span class="feature-icon">&#127807;</span>
@@ -137,24 +153,17 @@
     <div class="container">
       <div class="text-center fade-in">
         <h2>Storytime with Norbert</h2>
-        <p style="max-width: 640px; margin: 0 auto 0.5rem;">Storytime with Norbert is a soft place to land. Here, the noise of the world quiets down, imagination takes over, and the stories stay with you long after they end.</p>
-        <p style="max-width: 640px; margin: 0 auto 0.5rem;">What makes these storytimes different is that they ask nothing from you. You don't have to do anything here except pause, breathe, and feel safe.</p>
-        <p style="max-width: 640px; margin: 0 auto 1.5rem;">Here you'll find story readings, Wednesday Wisdom food for thought, and moments of Norbert living his best life. Stories here may comfort right away. Others make you smile. And a few may linger, because the lesson is wrapped inside the metaphor and opens later.</p>
+        <p class="section-subtitle">Beloved read-alouds and forest stories shared with Norbert by my side</p>
       </div>
       <div style="max-width: 540px; margin: 2rem auto 0;">
         <div class="fade-in">
           <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DC-WhaBMzdj/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 0 auto; max-width:540px; min-width:326px; padding:0; width:99.375%;"></blockquote>
           <script async src="//www.instagram.com/embed.js"></script>
-          <p style="text-align: center; margin-top: 1rem; font-style: italic; color: var(--forest-deep); font-size: 1.1rem;">The original Tug of War Lesson - the storytime video that inspired the book</p>
+          <p style="text-align: center; margin-top: 1rem; font-style: italic; color: var(--sage-light); font-size: 0.95rem;">The original Tug of War Lesson - the storytime video that inspired the book</p>
         </div>
       </div>
-      <div class="text-center" style="margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center;">
-        <a href="https://www.instagram.com/norbertbarkah/" class="btn btn--dark-outline" target="_blank" rel="noopener">Watch on Instagram</a>
-        <a href="https://www.tiktok.com/@norbertbarkah225" class="btn btn--dark-outline" target="_blank" rel="noopener">Watch on TikTok</a>
-        <a href="https://www.youtube.com/@NorbertBarkah" class="btn btn--dark-outline" target="_blank" rel="noopener">Watch on YouTube</a>
-      </div>
-      <div class="text-center" style="margin-top: 1rem;">
-        <a href="storytime.html" class="btn btn--primary">See More Stories</a>
+      <div class="text-center" style="margin-top: 2rem;">
+        <a href="storytime.html" class="btn btn--dark-outline">Watch More Stories</a>
       </div>
     </div>
   </section>
@@ -168,7 +177,7 @@
         </div>
         <div class="about-text">
           <h2>About Mama Sue</h2>
-          <p class="section-subtitle" style="font-size: 1.4rem;">Storyteller, artist, and the heart behind the enchanted forest</p>
+          <p class="section-subtitle">Storyteller, artist, and the heart behind the enchanted forest</p>
           <p>I'm Susan Higgins, a storyteller, artist, and heart guide who believes in the power of kindness, imagination, and inner light. My stories, shared with Norbert Barkah by my side, are created to help children and grown-ups find courage, connection, and calm in uncertain times. Inspired by the magic of the natural world and the quiet strength of healing, I write to offer a softer place to land.</p>
           <p>What began as reading stories to Norbert grew into something much bigger. People did not just listen, they felt something. From those simple storytime moments came a book, a growing enchanted forest world, and a deeper calling to create stories that comfort, encourage, and help people remember the light within themselves.</p>
           <a href="about.html" class="btn btn--dark-outline" style="margin-top: 1rem;">About Mama Sue</a>

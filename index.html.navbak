@@ -20,8 +20,22 @@
 
   <!-- ====== HEADER ====== -->
   <header class="site-header">
-    <div class="header-inner" style="justify-content: center;">
+    <div class="header-inner">
       <a href="index.html" class="site-logo"><img src="images/logo.jpg" alt="Norbert Barkah logo" class="header-logo"> Norbert <span>Barkah</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="books.html">Books</a>
+        <a href="enchanted-forest.html">Enchanted Forest</a>
+        <a href="storytime.html">Storytime</a>
+        <a href="press.html">Press</a>
+        <a href="friends.html">Friends</a>
+        <a href="testimonials.html">Testimonials</a>
+                <a href="contact.html">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 

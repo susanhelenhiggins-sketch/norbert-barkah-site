@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Norbert Barkah</title>
+  <meta name="description" content="Get in touch with Mama Sue. Reach out about books, storytime, collaborations, speaking, or just to share a kind note.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo"><img src="images/logo.jpg" alt="Norbert Barkah logo" class="header-logo"> Norbert <span>Barkah</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="books.html">Books</a>
+        <a href="enchanted-forest.html">Enchanted Forest</a>
+        <a href="storytime.html">Storytime</a>
+        <a href="press.html">Press</a>
+        <a href="friends.html">Friends</a>
+        <a href="testimonials.html">Testimonials</a>
+                <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Get in Touch</h1>
+      <p>Thank you for being here and for spending time in Norbert's world</p>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--cream);">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <div class="fade-in">
+          <h2>Send a Message</h2>
+          <p style="margin-bottom: 2rem;">I'd love to hear from you. Whether you are reaching out about books, storytime, collaborations, speaking, or simply want to share a kind note, thank you for being here and for spending time in Norbert's world.</p>
+          
+          <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact-success.html">
+            <input type="hidden" name="form-name" value="contact">
+            <p style="display:none;"><label>Do not fill this in: <input name="bot-field"></label></p>
+            
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+            
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            
+            <label for="subject">What is this about?</label>
+            <select id="subject" name="subject">
+              <option value="">Choose one...</option>
+              <option value="reader">Just saying hello</option>
+              <option value="media">Media or interview inquiry</option>
+              <option value="school">School, library, or event visit</option>
+              <option value="collaboration">Collaboration or partnership</option>
+              <option value="speaking">Speaking inquiry</option>
+              <option value="other">Something else</option>
+            </select>
+            
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Tell us what's on your mind..." required></textarea>
+            
+            <button type="submit" class="btn btn--primary">Send Message</button>
+              <p style="font-size: 0.85rem; color: var(--sage-light); margin-top: 0.75rem;">For professional inquiries, event requests, collaborations, and reader notes.</p>
+          </form>
+        </div>
+
+        <div class="fade-in">
+          <div class="contact-info-block">
+            <h3>Other Ways to Connect</h3>
+            
+            <div class="contact-info-item">
+              <h4>General Inquiries</h4>
+              <p>info@norbertbarkah.com</p>
+            </div>
+
+            <div class="contact-info-item">
+              <h4>Media & Press</h4>
+              <p>For interviews, features, and press requests, please include your outlet and deadline in your message.</p>
+            </div>
+
+            <div class="contact-info-item">
+              <h4>Schools & Libraries</h4>
+              <p>Interested in a reading, visit, or virtual event? Let us know your school or organization, grade levels, and preferred dates.</p>
+            </div>
+
+            <div class="contact-info-item">
+              <h4>Speaking</h4>
+              <p>For speaking inquiries, please share event details, audience, and timing in your message.</p>
+            </div>
+
+            <div class="contact-info-item">
+              <h4>Follow Along</h4>
+              <div class="social-links" style="margin-top: 0.5rem;">
+                <a href="https://www.instagram.com/norbertbarkah/" target="_blank" rel="noopener" aria-label="Instagram">&#9679;</a>
+                <a href="https://www.tiktok.com/@norbertbarkah225" target="_blank" rel="noopener" aria-label="TikTok">&#9679;</a>
+                <a href="https://www.youtube.com/@NorbertBarkah" target="_blank" rel="noopener" aria-label="YouTube">&#9679;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="site-logo"><img src="images/logo.jpg" alt="Norbert Barkah logo" class="header-logo"> Norbert <span>Barkah</span></a>
+          <p>Gentle stories of kindness, courage, and the quiet light that lives in all of us.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/norbertbarkah/" target="_blank" rel="noopener" aria-label="Instagram">&#9679;</a>
+            <a href="https://www.tiktok.com/@norbertbarkah225" target="_blank" rel="noopener" aria-label="TikTok">&#9679;</a>
+            <a href="https://www.youtube.com/@NorbertBarkah" target="_blank" rel="noopener" aria-label="YouTube">&#9679;</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="books.html">Books</a></li>
+            <li><a href="enchanted-forest.html">Enchanted Forest</a></li>
+            <li><a href="storytime.html">Storytime</a>
+        <a href="press.html">Press</a>
+        <a href="friends.html">Friends</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="testimonials.html">Testimonials</a>
+                <a href="contact.html">Contact</a></li>
+            <li><a href="press.html">Press</a>
+        <a href="friends.html">Friends</a></li>
+            <li><a href="#">School Visits</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Norbert Barkah. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
