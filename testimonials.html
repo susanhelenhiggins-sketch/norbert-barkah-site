@@ -2,105 +2,503 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Testimonials &#8212; Norbert Barkah</title>
-  <meta name="description" content="Gentle story videos, enchanted forest tales, guided meditations, and children's books created to bring comfort, kindness, and wonder. Read with heart, shared with Norbert by my side.">
+  <title>Testimonials - Norbert Barkah</title>
+  <meta name="description" content="What readers, parents, educators, and the Norbert Barkah community are saying about The Tug of War Lesson.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ---- ROTATING FEATURED CAROUSEL ---- */
+    .featured-carousel {
+      background: #2C4A3E;
+      padding: 3rem 2rem;
+    }
+    .featured-carousel-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+    }
+    .featured-slide {
+      display: none;
+    }
+    .featured-slide.active {
+      display: block;
+    }
+    .featured-stars {
+      color: #C4A35A;
+      font-size: 1.2rem;
+      letter-spacing: 3px;
+      margin-bottom: 1.25rem;
+    }
+    .featured-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-weight: 600;
+      color: #C4A35A;
+      margin: 0 0 1rem 0;
+      letter-spacing: 0.03em;
+    }
+    .featured-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      font-style: italic;
+      line-height: 1.7;
+      color: #FAF6F0;
+      margin: 0 0 1.5rem 0;
+    }
+    .featured-byline {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: rgba(196,163,90,0.85);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .featured-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .featured-btn {
+      background: none;
+      border: 2px solid rgba(196,163,90,0.6);
+      color: #C4A35A;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .featured-btn:hover {
+      border-color: #C4A35A;
+      background: rgba(196,163,90,0.1);
+    }
+    .featured-counter {
+      font-size: 0.82rem;
+      color: rgba(250,246,240,0.55);
+      min-width: 50px;
+      text-align: center;
+    }
+
+    /* ---- REVIEWS GRID ---- */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+      margin-top: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .testimonials-grid { grid-template-columns: 1fr; }
+    }
+    .testimonial-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(44,74,62,0.07);
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .testimonial-stars {
+      color: #C4A35A;
+      font-size: 1rem;
+      letter-spacing: 2px;
+    }
+    .testimonial-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #2C4A3E;
+      margin: 0;
+      line-height: 1.4;
+    }
+    .testimonial-body {
+      font-size: 0.97rem;
+      line-height: 1.75;
+      color: #3a3a3a;
+      font-style: italic;
+      flex: 1;
+      margin: 0;
+    }
+    .testimonial-byline {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #888;
+      margin: 0;
+      padding-top: 0.5rem;
+      border-top: 1px solid rgba(44,74,62,0.08);
+    }
+    .testimonial-byline span {
+      font-weight: 400;
+      font-style: italic;
+    }
+  </style>
 </head>
 <body>
+
 <!-- ====== HEADER ====== -->
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="site-logo"><img src="images/logo.jpg" alt="Norbert Barkah logo" class="header-logo"> Norbert <span>Barkah</span></a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="books.html">Books</a>
-        <a href="enchanted-forest.html">Enchanted Forest</a>
-        <a href="storytime.html">Storytime</a>
-        <a href="press.html">Press</a>
-        <a href="friends.html">Friends</a>
-        <a href="testimonials.html" class="active">Testimonials</a>
-                <a href="contact.html">Contact</a>
-      </nav>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="site-logo"><img src="images/logo.jpg" alt="Norbert Barkah logo" class="header-logo"> Norbert <span>Barkah</span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="books.html">Books</a>
+      <a href="enchanted-forest.html">Enchanted Forest</a>
+      <a href="storytime.html">Storytime</a>
+      <a href="press.html">Press</a>
+      <a href="friends.html">Friends</a>
+      <a href="testimonials.html" class="active">Testimonials</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ====== PAGE HERO ====== -->
+<section class="page-hero" style="background: var(--forest-deep); padding: clamp(3rem, 8vw, 5rem) 0; text-align: center;">
+  <div class="container">
+    <h1 style="color: #FAF6F0; font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem);">What People Are Saying</h1>
+    <p class="section-subtitle" style="color: #C4A35A; max-width: 600px; margin: 1rem auto 0;">Words from readers, parents, educators, and the community that has grown around Norbert's world.</p>
+  </div>
+</section>
+
+<!-- ====== ROTATING FEATURED CAROUSEL ====== -->
+<section class="featured-carousel">
+  <div class="featured-carousel-inner">
+
+    <div class="featured-slide active">
+      <p class="featured-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+      <p class="featured-title">Meant to be a gift but I couldn't part with it.</p>
+      <p class="featured-quote">"I am a huge fan of Norbert and his message of kindness on IG so I had to get this book. It was meant to be a gift for my best friend for her preschool classroom but I couldn't part with it once I opened it up. The message and the pictures. It just warmed my heart."</p>
+      <p class="featured-byline">Marisa D. &middot; Verified Purchase</p>
     </div>
-  </header>
 
-    <!-- ====== PAGE HERO ====== -->
-    <section class="page-hero" style="background: var(--forest-deep); padding: clamp(3rem, 8vw, 5rem) 0; text-align: center;">
-      <div class="container">
-        <h1 style="color: var(--cream-light); font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem);">What People Are Saying</h1>
-        <p class="section-subtitle" style="color: var(--gold-glow); max-width: 600px; margin: 1rem auto 0;">Words from readers, parents, educators, and the community that has grown around Norbert&#39;s world.</p>
-      </div>
-    </section>
+    <div class="featured-slide">
+      <p class="featured-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+      <p class="featured-title">A Beautiful Story About Kindness</p>
+      <p class="featured-quote">"After a rough day her stories bring me back to a calmer, better world. So looking forward to their next book!"</p>
+      <p class="featured-byline">Mike K. &middot; Verified Purchase</p>
+    </div>
 
-    <!-- ====== TESTIMONIALS PLACEHOLDER ====== -->
-    <section class="section">
-      <div class="container container--narrow text-center">
-        <div class="fade-in" style="padding: 3rem 0;">
-          <span style="font-size: 3rem;">&#127807;</span>
-          <h2 style="margin-top: 1rem;">Coming Soon</h2>
-          <p>This page will be home to testimonials from Amazon readers, Instagram followers, TikTok fans, educators, parents, and everyone who has found their way into Norbert&#39;s world.</p>
-          <p style="color: var(--sage-light); font-style: italic; margin-top: 1rem;">Check back soon.</p>
-          <a href="books.html" class="btn btn--primary" style="margin-top: 2rem;">See the Books</a>
-        </div>
+    <div class="featured-slide">
+      <p class="featured-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+      <p class="featured-title">Lovely Message for Today's World</p>
+      <p class="featured-quote">"Mama Sue and Norbert Barkah are the sweetest team! It's a lovely, much-needed message for today's world!"</p>
+      <p class="featured-byline">Anna &middot; Kindle Edition</p>
+    </div>
+
+    <div class="featured-slide">
+      <p class="featured-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+      <p class="featured-title">A lesson for all ages!</p>
+      <p class="featured-quote">"There's not a human alive, regardless of age and experience, who won't breathe easier after reading. I'm giving a copy to my granddaughter so that she grows up knowing Norbert, Lyra, and Mama Sue and hearing their message of love."</p>
+      <p class="featured-byline">Kathi &middot; Verified Purchase</p>
+    </div>
+
+    <div class="featured-slide">
+      <p class="featured-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+      <p class="featured-title">Norbert -- The Next Clifford</p>
+      <p class="featured-quote">"Susan Higgins' inviting watercolors are worth the price of admission. Watch out Clifford, Norbert is on your tail."</p>
+      <p class="featured-byline">Chris C. &middot; Verified Purchase</p>
+    </div>
+
+    <div class="featured-slide">
+      <p class="featured-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+      <p class="featured-title">Beautiful story for everyone.</p>
+      <p class="featured-quote">"This is a beautifully written story about kindness and forgiveness and lastly letting go. A must have for any classroom. I look forward to more books from this author."</p>
+      <p class="featured-byline">Jeff E. &middot; Verified Purchase</p>
+    </div>
+
+    <div class="featured-slide">
+      <p class="featured-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+      <p class="featured-title">A lesson to be learned.</p>
+      <p class="featured-quote">"An excellent story with a great message for children and adults. Her illustrations will delight children and hold their interest."</p>
+      <p class="featured-byline">Ann Dean &middot; Verified Purchase</p>
+    </div>
+
+    <div class="featured-slide">
+      <p class="featured-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+      <p class="featured-title">Kindness is a real thing.</p>
+      <p class="featured-quote">"This is an incredible lesson for kids and adults of all ages. The message of kindness and concern for others is clear and beautifully told. The story and illustrations bring joy!"</p>
+      <p class="featured-byline">Betty &middot; Verified Purchase</p>
+    </div>
+
+    <div class="featured-slide">
+      <p class="featured-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+      <p class="featured-title">A must have in your children's daily reading rotation!</p>
+      <p class="featured-quote">"The perfect bedtime story to give our children the strength they need to confront their issues in a kind manner."</p>
+      <p class="featured-byline">Amazon Customer &middot; Verified Purchase</p>
+    </div>
+
+    <div class="featured-slide">
+      <p class="featured-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+      <p class="featured-title">The Tug of War Lesson by Susan Higgins</p>
+      <p class="featured-quote">"LOVE Norbert Barkah. Susan writes and teaches us a GREAT story. We can all learn from Norbert Barkah and Susan. Great for teachers and everyone."</p>
+      <p class="featured-byline">Kathleen Adams &middot; Verified Purchase</p>
+    </div>
+
+    <div class="featured-slide">
+      <p class="featured-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+      <p class="featured-title">Calling all dog lovers</p>
+      <p class="featured-quote">"Y'all, it's a book of pure love and positivity. Every dog lover MUST have this book. 10 stars out of 5."</p>
+      <p class="featured-byline">Gabriela &middot; Verified Purchase</p>
+    </div>
+
+    <div class="featured-slide">
+      <p class="featured-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+      <p class="featured-title">My beloved Norbert and Mama Sue</p>
+      <p class="featured-quote">"Your book is like a warm hug. A story for all ages, not just for children. To all who get a copy -- enjoy because I really did."</p>
+      <p class="featured-byline">Bentley &middot; Verified Purchase</p>
+    </div>
+
+    <div class="featured-slide">
+      <p class="featured-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+      <p class="featured-title">Beautiful</p>
+      <p class="featured-quote">"This is such a beautiful story with themes that are relevant to kids and adults alike. I can't wait to share their story with my young niece and nephew."</p>
+      <p class="featured-byline">Victoria &middot; Kindle Edition</p>
+    </div>
+
+    <div class="featured-slide">
+      <p class="featured-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+      <p class="featured-title">Beautifully crafted story!</p>
+      <p class="featured-quote">"What an absolutely lovely tale written by Mama Sue to share with the whole family. My daughter loved it, so did I!"</p>
+      <p class="featured-byline">Lenny &middot; Verified Purchase</p>
+    </div>
+
+    <div class="featured-slide">
+      <p class="featured-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+      <p class="featured-title">Kindness</p>
+      <p class="featured-quote">"In a world where you can be anything, be kind like Norbert. Wonderful story of kindness."</p>
+      <p class="featured-byline">Amazon Reader &middot; Verified Purchase</p>
+    </div>
+
+    <div class="featured-slide">
+      <p class="featured-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+      <p class="featured-title">Love love love the Tug of War Lesson</p>
+      <p class="featured-quote">"Fabulous book, great story and illustrations. I 100% recommend this book. Kids and adults will love Norbert and Mama Sue."</p>
+      <p class="featured-byline">Heidi W. &middot; Verified Purchase &middot; United Kingdom</p>
+    </div>
+
+    <div class="featured-controls">
+      <button class="featured-btn" onclick="changeFeatured(-1)" aria-label="Previous review">&#8592;</button>
+      <span class="featured-counter">1 of 16</span>
+      <button class="featured-btn" onclick="changeFeatured(1)" aria-label="Next review">&#8594;</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== ALL REVIEWS GRID ====== -->
+<section class="section" style="background: var(--cream);">
+  <div class="container">
+
+    <div class="text-center fade-in" style="margin-bottom: 0.5rem;">
+      <h2>All Amazon Reviews</h2>
+      <p class="section-subtitle">The Tug of War Lesson &middot; 16 five-star reviews</p>
+    </div>
+
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card fade-in">
+        <p class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="testimonial-title">Meant to be a gift but I couldn't part with it.</p>
+        <p class="testimonial-body">I am a huge fan of Norbert and his message of kindness on IG so I had to get this book, which I'm hoping is the first of many. It was meant to be a gift for my best friend for her preschool classroom but I couldn't part with it once I opened it up. The message and the pictures. It just warmed my heart. Guess I'll have to get another one for my friend.</p>
+        <p class="testimonial-byline">Marisa D. <span>&middot; Verified Purchase</span></p>
       </div>
-    </section>
+
+      <div class="testimonial-card fade-in">
+        <p class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="testimonial-title">A Beautiful Story About Kindness</p>
+        <p class="testimonial-body">This book was absolutely a wonderful read as it has a beautiful story about forgiveness and letting go and to be kind. Mama Sue and Norbert are my absolute favorite on Instagram as I would listen to her soothing voice tell a story. After a rough day her stories bring me back to a calmer, better world. So looking forward to their next book!</p>
+        <p class="testimonial-byline">Mike K. <span>&middot; Verified Purchase</span></p>
+      </div>
+
+      <div class="testimonial-card fade-in">
+        <p class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="testimonial-title">Lovely Message for Today's World</p>
+        <p class="testimonial-body">Mama Sue and Norbert Barkah are the sweetest team! I love the book, your Instagram, and all of the positive messages you share. Congratulations on your book, Mama Sue and Norbert! It's a lovely, much-needed message for today's world!</p>
+        <p class="testimonial-byline">Anna <span>&middot; Kindle Edition</span></p>
+      </div>
+
+      <div class="testimonial-card fade-in">
+        <p class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="testimonial-title">A lesson for all ages!</p>
+        <p class="testimonial-body">Sue brings an enchanted world to life through the eyes of Norbert Barkah, her loving German Shepherd. I am 70, not a child obviously, but this story inspired me to let go of some things I didn't know I needed to let go of. The lesson is peace, and there's not a human alive, regardless of age and experience, who won't breathe easier after reading. I'm giving a copy to my granddaughter so that she grows up knowing Norbert, Lyra, and Mama Sue and hearing their message of love.</p>
+        <p class="testimonial-byline">Kathi <span>&middot; Verified Purchase</span></p>
+      </div>
+
+      <div class="testimonial-card fade-in">
+        <p class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="testimonial-title">Norbert -- The Next Clifford</p>
+        <p class="testimonial-body">A wonderful way to reach children with a parable about a dog who struggles with the same playground lessons about bullies we all did. This is a modern-day fairy tale that is so real, you can hear the dogs bark as they play. It also introduces the young reader to a new level of spirituality through the eyes of Norbert Barkah, a loveable mutt who just wants to get along. Don't forget the beautiful artwork -- Susan Higgins' inviting watercolors are worth the price of admission. Watch out Clifford, Norbert is on your tail.</p>
+        <p class="testimonial-byline">Chris C. <span>&middot; Verified Purchase</span></p>
+      </div>
+
+      <div class="testimonial-card fade-in">
+        <p class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="testimonial-title">Beautiful story for everyone.</p>
+        <p class="testimonial-body">This is a beautifully written story about kindness and forgiveness and lastly letting go. Letting go is something many people have trouble with. This book shows how letting go leads to better things in life, a new friend. Illustrations are beautiful and add to the story. A must have for any classroom. I look forward to more books from this author.</p>
+        <p class="testimonial-byline">Jeff E. <span>&middot; Verified Purchase</span></p>
+      </div>
+
+      <div class="testimonial-card fade-in">
+        <p class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="testimonial-title">A lesson to be learned.</p>
+        <p class="testimonial-body">The Tug of War Lesson by Susan Higgins is an excellent story with a great message for children and adults. Her illustrations will delight children and hold their interest.</p>
+        <p class="testimonial-byline">Ann Dean <span>&middot; Verified Purchase</span></p>
+      </div>
+
+      <div class="testimonial-card fade-in">
+        <p class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="testimonial-title">Kindness is a real thing.</p>
+        <p class="testimonial-body">This is an incredible lesson for kids and adults of all ages. The message of kindness and concern for others is clear and beautifully told. The story and illustrations bring joy!</p>
+        <p class="testimonial-byline">Betty <span>&middot; Verified Purchase</span></p>
+      </div>
+
+      <div class="testimonial-card fade-in">
+        <p class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="testimonial-title">A must have in your children's daily reading rotation!</p>
+        <p class="testimonial-body">The Tug of War Lesson by Susan Higgins is the perfect children's book. The beautiful illustrations and lovely story teaches young children love, compassion and empathy. The perfect bedtime story to give our children the strength they need to confront their issues in a kind manner.</p>
+        <p class="testimonial-byline">Amazon Customer <span>&middot; Verified Purchase</span></p>
+      </div>
+
+      <div class="testimonial-card fade-in">
+        <p class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="testimonial-title">The Tug of War Lesson by Susan Higgins</p>
+        <p class="testimonial-body">LOVE Norbert Barkah. The Tug of War Lesson. Susan writes and teaches us a GREAT story, always on TikTok and her writing. We can all learn from Norbert Barkah and Susan. Great for teachers and everyone.</p>
+        <p class="testimonial-byline">Kathleen Adams <span>&middot; Verified Purchase</span></p>
+      </div>
+
+      <div class="testimonial-card fade-in">
+        <p class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="testimonial-title">Calling all dog lovers</p>
+        <p class="testimonial-body">Y'all, it's a book of pure love and positivity. I got one for me but I know this will be in every stocking this Christmas. Every dog lover MUST have this book. 10 stars out of 5.</p>
+        <p class="testimonial-byline">Gabriela <span>&middot; Verified Purchase</span></p>
+      </div>
+
+      <div class="testimonial-card fade-in">
+        <p class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="testimonial-title">My beloved Norbert and Mama Sue</p>
+        <p class="testimonial-body">Your book is like a warm hug. A story for all ages, not just for children. To all who get a copy -- enjoy because I really did.</p>
+        <p class="testimonial-byline">Bentley <span>&middot; Verified Purchase</span></p>
+      </div>
+
+      <div class="testimonial-card fade-in">
+        <p class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="testimonial-title">Beautiful</p>
+        <p class="testimonial-body">This is such a beautiful story with themes that are relevant to kids and adults alike. I am a fan of Norbert and Mama Sue and can't wait to share their story with my young niece and nephew.</p>
+        <p class="testimonial-byline">Victoria <span>&middot; Kindle Edition</span></p>
+      </div>
+
+      <div class="testimonial-card fade-in">
+        <p class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="testimonial-title">Beautifully crafted story!</p>
+        <p class="testimonial-body">What an absolutely lovely tale written by Mama Sue to share with the whole family. My daughter loved it, so did I!</p>
+        <p class="testimonial-byline">Lenny <span>&middot; Verified Purchase</span></p>
+      </div>
+
+      <div class="testimonial-card fade-in">
+        <p class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="testimonial-title">Kindness</p>
+        <p class="testimonial-body">In a world where you can be anything, be kind like Norbert. Wonderful story of kindness.</p>
+        <p class="testimonial-byline">Amazon Reader <span>&middot; Verified Purchase</span></p>
+      </div>
+
+      <div class="testimonial-card fade-in">
+        <p class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="testimonial-title">Love love love the Tug of War Lesson</p>
+        <p class="testimonial-body">Fabulous book, great story and illustrations. I 100% recommend this book. Kids and adults will love Norbert and Mama Sue.</p>
+        <p class="testimonial-byline">Heidi W. <span>&middot; Verified Purchase &middot; United Kingdom</span></p>
+      </div>
+
+    </div>
+
+    <div class="text-center fade-in" style="margin-top: 3rem;">
+      <a href="https://www.amazon.com/Tug-War-Lesson-Norbert-Barkah/dp/1945567627/" class="btn btn--dark-outline" target="_blank" rel="noopener">Read All Reviews on Amazon</a>
+    </div>
+
+  </div>
+</section>
 
 <!-- ====== FOOTER ====== -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <a href="index.html" class="site-logo"><img src="images/logo.jpg" alt="Norbert Barkah logo" class="header-logo"> Norbert <span>Barkah</span></a>
-          <p>Gentle stories of kindness, courage, and the quiet light that lives in all of us.</p>
-          <div class="social-links">
-            <a href="https://www.instagram.com/norbertbarkah/" target="_blank" rel="noopener" aria-label="Instagram">&#9679;</a>
-            <a href="https://www.tiktok.com/@norbertbarkah225" target="_blank" rel="noopener" aria-label="TikTok">&#9679;</a>
-            <a href="https://www.youtube.com/@NorbertBarkah" target="_blank" rel="noopener" aria-label="YouTube">&#9679;</a>
-          </div>
-        </div>
-        <div class="footer-links">
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="books.html">Books</a></li>
-            <li><a href="enchanted-forest.html">Enchanted Forest</a></li>
-            <li><a href="storytime.html">Storytime</a>
-        <a href="press.html">Press</a>
-        <a href="friends.html">Friends</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Connect</h4>
-          <ul>
-            <li><a href="testimonials.html">Testimonials</a>
-                <a href="contact.html">Contact</a></li>
-            <li><a href="press.html">Press</a>
-        <a href="friends.html">Friends</a></li>
-            <li><a href="#">School Visits</a></li>
-          </ul>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="site-logo"><img src="images/logo.jpg" alt="Norbert Barkah logo" class="header-logo"> Norbert <span>Barkah</span></a>
+        <p>Gentle stories of kindness, courage, and the quiet light that lives in all of us.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/norbertbarkah/" target="_blank" rel="noopener" aria-label="Instagram">&#9679;</a>
+          <a href="https://www.tiktok.com/@norbertbarkah225" target="_blank" rel="noopener" aria-label="TikTok">&#9679;</a>
+          <a href="https://www.youtube.com/@NorbertBarkah" target="_blank" rel="noopener" aria-label="YouTube">&#9679;</a>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Norbert Barkah. All rights reserved.</p>
-        <p style="font-size: 0.75rem; color: rgba(255,255,255,0.4); margin-top: 0.5rem;">Photography by Faith Hamberg, Heartsake Photography</p>
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="enchanted-forest.html">Enchanted Forest</a></li>
+          <li><a href="storytime.html">Storytime</a></li>
+          <li><a href="press.html">Press</a></li>
+          <li><a href="friends.html">Friends</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="press.html">Press</a></li>
+          <li><a href="friends.html">Friends</a></li>
+          <li><a href="#">School Visits</a></li>
+        </ul>
       </div>
     </div>
-  </footer>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Norbert Barkah. All rights reserved.</p>
+      <p style="font-size: 0.75rem; color: rgba(255,255,255,0.4); margin-top: 0.5rem;">Photography by Faith Hamberg, <a href="https://www.heartsakephotography.com/" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.4);">Heartsake Photography</a></p>
+    </div>
+  </div>
+</footer>
 
 <script src="js/main.js"></script>
+<script>
+  // ---- FEATURED CAROUSEL LOGIC ----
+  let currentFeatured = 0;
+  const featuredSlides = document.querySelectorAll('.featured-slide');
+  const featuredCounter = document.querySelector('.featured-counter');
+  const total = featuredSlides.length;
+
+  function changeFeatured(dir) {
+    featuredSlides[currentFeatured].classList.remove('active');
+    currentFeatured = (currentFeatured + dir + total) % total;
+    featuredSlides[currentFeatured].classList.add('active');
+    featuredCounter.textContent = (currentFeatured + 1) + ' of ' + total;
+  }
+
+  // Auto-advance every 8 seconds
+  setInterval(function() { changeFeatured(1); }, 8000);
+</script>
+
 </body>
 </html>
