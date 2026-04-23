@@ -10,22 +10,11 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Story World — The Enchanted Forest</title>
-  <meta name="description" content="Meet the characters of Norbert's enchanted forest world. Norbert, Lyra, and Sophia - and the themes of Kindness, Courage, and Inner Light that guide every story.">
+  <meta name="description" content="Step into the enchanted forest. Meet Norbert, Lyra, and Sophia in a world where kindness is strength and every creature carries light.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <!-- SEO: Open Graph + Twitter Card -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Norbert Barkah">
-  <meta property="og:title" content="The Enchanted Forest | Norbert Barkah">
-  <meta property="og:description" content="Meet the characters of Norbert's enchanted forest world. Norbert, Lyra, and Sophia - and the themes of Kindness, Courage, and Inner Light that guide every story.">
-  <meta property="og:image" content="https://norbertbarkah.com/images/norbert-lyra-artwork.png">
-  <meta property="og:url" content="https://norbertbarkah.com/enchanted-forest.html">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="The Enchanted Forest | Norbert Barkah">
-  <meta name="twitter:description" content="Meet the characters of Norbert's enchanted forest world. Norbert, Lyra, and Sophia - and the themes of Kindness, Courage, and Inner Light that guide every story.">
-  <meta name="twitter:image" content="https://norbertbarkah.com/images/norbert-lyra-artwork.png">
 </head>
 <body>
 

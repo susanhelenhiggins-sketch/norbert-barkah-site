@@ -10,7 +10,7 @@
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Testimonials - Norbert Barkah</title>
-  <meta name="description" content="Sixteen five-star Amazon reviews for The Tug of War Lesson. Readers, parents, and educators share what Norbert Barkah's stories mean to them.">
+  <meta name="description" content="What readers, parents, educators, and the Norbert Barkah community are saying about The Tug of War Lesson.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -150,17 +150,6 @@
       font-style: italic;
     }
   </style>
-  <!-- SEO: Open Graph + Twitter Card -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Norbert Barkah">
-  <meta property="og:title" content="What Readers Say | Norbert Barkah Testimonials">
-  <meta property="og:description" content="Sixteen five-star Amazon reviews for The Tug of War Lesson. Readers, parents, and educators share what Norbert Barkah's stories mean to them.">
-  <meta property="og:image" content="https://norbertbarkah.com/images/tug-of-war-lesson-cover.jpg">
-  <meta property="og:url" content="https://norbertbarkah.com/testimonials.html">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="What Readers Say | Norbert Barkah Testimonials">
-  <meta name="twitter:description" content="Sixteen five-star Amazon reviews for The Tug of War Lesson. Readers, parents, and educators share what Norbert Barkah's stories mean to them.">
-  <meta name="twitter:image" content="https://norbertbarkah.com/images/tug-of-war-lesson-cover.jpg">
 </head>
 <body>
 
