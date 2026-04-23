@@ -1358,3 +1358,69 @@ p {
 .signup .formkit-powered-by a {
   color: rgba(250, 246, 240, 0.5) !important;
 }
+
+/* ============================================
+   KIT FORM - TEACHER EDITION (#teacher-signup)
+   Matches the dark forest green section on books.html
+   ============================================ */
+
+#teacher-signup .formkit-form {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+#teacher-signup .formkit-form [data-style="clean"] {
+  background: transparent !important;
+}
+
+#teacher-signup .formkit-input {
+  background: rgba(250, 246, 240, 0.1) !important;
+  border: 2px solid rgba(250, 246, 240, 0.2) !important;
+  border-radius: 8px !important;
+  color: #FAF6F0 !important;
+  font-family: var(--font-body) !important;
+  font-size: 1rem !important;
+  padding: 0.85rem 1.25rem !important;
+}
+
+#teacher-signup .formkit-input::placeholder {
+  color: rgba(250, 246, 240, 0.5) !important;
+}
+
+#teacher-signup .formkit-input:focus {
+  border-color: #C4A35A !important;
+  background: rgba(250, 246, 240, 0.15) !important;
+  outline: none !important;
+}
+
+#teacher-signup .formkit-submit {
+  background-color: #C4A35A !important;
+  color: #2C4A3E !important;
+  border: 2px solid #C4A35A !important;
+  border-radius: 8px !important;
+  font-family: var(--font-body) !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  padding: 0.85rem 2rem !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  letter-spacing: 0.02em !important;
+}
+
+#teacher-signup .formkit-submit:hover {
+  background-color: #D4BC82 !important;
+  border-color: #D4BC82 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 16px rgba(196, 163, 90, 0.3) !important;
+}
+
+#teacher-signup .formkit-guarantee,
+#teacher-signup .formkit-powered-by-convertkit-container {
+  color: rgba(250, 246, 240, 0.4) !important;
+  font-size: 0.8rem !important;
+}
+
+#teacher-signup .formkit-powered-by-convertkit-container a {
+  color: rgba(250, 246, 240, 0.5) !important;
+}
