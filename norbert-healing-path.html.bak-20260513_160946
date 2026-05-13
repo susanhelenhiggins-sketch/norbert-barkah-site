@@ -37,7 +37,7 @@
       background-image: url('images/enchanted-forest-hero.jpg');
       background-size: cover;
       background-position: center;
-      min-height: 460px; padding-top: 140px;
+      min-height: 460px;
       display: flex;
       align-items: center;
       position: relative;
