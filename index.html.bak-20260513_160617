@@ -37,99 +37,59 @@
   .about-portrait img {
     object-position: 50% 15% !important;
   }
-    /* ---- Journal callout section (desktop) ---- */
-    .journal-callout {
-      background: #f0ece4;
-      border-top: 1px solid rgba(196, 163, 90, 0.25);
-      border-bottom: 1px solid rgba(196, 163, 90, 0.25);
-      padding: 2.5rem 2rem;
-      text-align: center;
+
+    /* ---- Journal announcement bar ---- */
+    .journal-bar {
+      background: #3a6352;
+      padding: 7rem 2rem 1.25rem;
     }
-    .journal-callout-inner {
-      max-width: 680px;
+    .journal-bar-inner {
+      max-width: 700px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1rem;
+      gap: 1.25rem;
+      text-align: center;
     }
-    .journal-callout-eyebrow {
-      font-family: 'Nunito', sans-serif;
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #C4A35A;
-      margin: 0;
-    }
-    .journal-callout-text {
+    .journal-bar-text {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.4rem;
-      color: #2C4A3E;
-      margin: 0;
-      line-height: 1.65;
-    }
-    .journal-callout-btn {
-      display: inline-block;
-      background: #2C4A3E;
+      font-style: normal;
+      font-size: 1.35rem;
       color: #FAF6F0;
+      margin: 0;
+      line-height: 1.7;
+    }
+    .journal-bar-btn {
+      display: inline-block;
+      border: 1px solid rgba(196, 163, 90, 0.75);
+      color: #C4A35A;
       font-family: 'Nunito', sans-serif;
       font-size: 0.88rem;
-      letter-spacing: 0.05em;
-      padding: 0.65rem 1.75rem;
-      border-radius: 24px;
+      letter-spacing: 0.04em;
+      padding: 0.55rem 1.4rem;
+      border-radius: 20px;
       text-decoration: none;
+      white-space: nowrap;
       transition: background 0.2s;
     }
-    .journal-callout-btn:hover {
-      background: #3a6352;
-    }
-
-    /* ---- Sticky mobile ribbon ---- */
-    .journal-ribbon {
-      display: none;
+    .journal-bar-btn:hover {
+      background: rgba(196, 163, 90, 0.12);
     }
     @media (max-width: 700px) {
-      .journal-callout {
-        display: none;
+      .journal-bar {
+        padding: 1rem 1.25rem 1rem;
       }
-      .journal-ribbon {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 999;
-        background: #2C4A3E;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0.85rem 1.25rem;
-        border-top: 1px solid rgba(196, 163, 90, 0.35);
+      .journal-bar-inner {
+        gap: 0.75rem;
       }
-      .journal-ribbon-text {
-        font-family: 'Nunito', sans-serif;
-        font-size: 0.85rem;
-        color: rgba(250, 246, 240, 0.90);
-        margin: 0;
-        line-height: 1.4;
-      }
-      .journal-ribbon-btn {
-        display: inline-block;
-        border: 1px solid rgba(196, 163, 90, 0.75);
-        color: #C4A35A;
-        font-family: 'Nunito', sans-serif;
-        font-size: 0.82rem;
-        padding: 0.4rem 1rem;
-        border-radius: 16px;
-        text-decoration: none;
-        white-space: nowrap;
-        margin-left: 1rem;
-        flex-shrink: 0;
-      }
-      body {
-        padding-bottom: 60px;
+      .journal-bar-text {
+        font-size: 0.95rem;
+        line-height: 1.5;
       }
     }
-
+    /* Homepage hero -- journal bar clears the nav, reduce top padding */
+    .hero { padding-top: 10px; }
   </style>
 </head>
 <body>
@@ -154,6 +114,15 @@
       </button>
     </div>
   </header>
+
+  <!-- ====== JOURNAL ANNOUNCEMENT BAR ====== -->
+  <div class="journal-bar">
+    <div class="journal-bar-inner">
+      <p class="journal-bar-text">Norbert is walking a healing path, one brave pawstep at a time. Follow his journal for gentle updates from the forest.</p>
+      <a href="norbert-healing-path.html" class="journal-bar-btn">Read the Journal</a>
+    </div>
+  </div>
+
   <!-- ====== HERO ====== -->
   <section class="hero">
     <div class="hero-content">
@@ -166,22 +135,7 @@
     </div>
   </section>
 
-  <!-- ====== JOURNAL CALLOUT ====== -->
-  <div class="journal-callout">
-    <div class="journal-callout-inner">
-      <p class="journal-callout-eyebrow">A gentle update from the forest</p>
-      <p class="journal-callout-text">Norbert is walking a healing path, one brave pawstep at a time. Follow his journal for gentle updates from the forest.</p>
-      <a href="norbert-healing-path.html" class="journal-callout-btn">Read the Journal</a>
-    </div>
-  </div>
-
-    <!-- ====== MOBILE STICKY RIBBON ====== -->
-  <div class="journal-ribbon">
-    <p class="journal-ribbon-text">Norbert is on a healing path. Follow his journal.</p>
-    <a href="norbert-healing-path.html" class="journal-ribbon-btn">Read the Journal</a>
-  </div>
-
-    <!-- ====== MEET NORBERT ====== -->
+  <!-- ====== MEET NORBERT ====== -->
   <section class="section intro texture-overlay">
     <div class="container">
       <div class="intro-grid">
