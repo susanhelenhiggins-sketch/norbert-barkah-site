@@ -41,24 +41,23 @@
     /* ---- Journal announcement bar ---- */
     .journal-bar {
       background: #3a6352;
-      padding: 7rem 2rem 1.25rem;
+      padding: 4.5rem 2rem;
     }
     .journal-bar-inner {
-      max-width: 700px;
+      max-width: 900px;
       margin: 0 auto;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: 1.25rem;
-      text-align: center;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
     }
     .journal-bar-text {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: normal;
-      font-size: 1.35rem;
-      color: #FAF6F0;
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.95rem;
+      color: rgba(250, 246, 240, 0.92);
       margin: 0;
-      line-height: 1.7;
+      line-height: 1.5;
     }
     .journal-bar-btn {
       display: inline-block;
@@ -67,7 +66,7 @@
       font-family: 'Nunito', sans-serif;
       font-size: 0.88rem;
       letter-spacing: 0.04em;
-      padding: 0.55rem 1.4rem;
+      padding: 0.45rem 1.2rem;
       border-radius: 20px;
       text-decoration: none;
       white-space: nowrap;
@@ -76,20 +75,14 @@
     .journal-bar-btn:hover {
       background: rgba(196, 163, 90, 0.12);
     }
-    @media (max-width: 700px) {
-      .journal-bar {
-        padding: 1rem 1.25rem 1rem;
-      }
+    @media (max-width: 600px) {
       .journal-bar-inner {
+        flex-direction: column;
         gap: 0.75rem;
-      }
-      .journal-bar-text {
-        font-size: 0.95rem;
-        line-height: 1.5;
+        text-align: center;
       }
     }
-    /* Homepage hero -- journal bar clears the nav, reduce top padding */
-    .hero { padding-top: 10px; }
+
   </style>
 </head>
 <body>
@@ -249,7 +242,7 @@
           <p style="text-align: center; margin-top: 1rem; font-style: italic; color: var(--forest-deep); font-size: 1.1rem;">The original Tug of War Lesson - the storytime video that inspired the book</p>
         </div>
       </div>
-      <div class="text-center" style="margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; flex-direction: column;">
+      <div class="text-center" style="margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center;">
         <a href="https://www.instagram.com/norbertbarkah/" class="btn btn--dark-outline" target="_blank" rel="noopener">Watch on Instagram</a>
         <a href="https://www.tiktok.com/@norbertbarkah225" class="btn btn--dark-outline" target="_blank" rel="noopener">Watch on TikTok</a>
         <a href="https://www.youtube.com/@NorbertBarkah" class="btn btn--dark-outline" target="_blank" rel="noopener">Watch on YouTube</a>
