@@ -37,7 +37,53 @@
   .about-portrait img {
     object-position: 50% 15% !important;
   }
-</style>
+
+    /* ---- Journal announcement bar ---- */
+    .journal-bar {
+      background: #3a6352;
+      padding: 4.5rem 2rem;
+    }
+    .journal-bar-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .journal-bar-text {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.95rem;
+      color: rgba(250, 246, 240, 0.92);
+      margin: 0;
+      line-height: 1.5;
+    }
+    .journal-bar-btn {
+      display: inline-block;
+      border: 1px solid rgba(196, 163, 90, 0.75);
+      color: #C4A35A;
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.88rem;
+      letter-spacing: 0.04em;
+      padding: 0.45rem 1.2rem;
+      border-radius: 20px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .journal-bar-btn:hover {
+      background: rgba(196, 163, 90, 0.12);
+    }
+    @media (max-width: 600px) {
+      .journal-bar-inner {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+      }
+    }
+
+  </style>
 </head>
 <body>
 
@@ -61,6 +107,14 @@
       </button>
     </div>
   </header>
+
+  <!-- ====== JOURNAL ANNOUNCEMENT BAR ====== -->
+  <div class="journal-bar">
+    <div class="journal-bar-inner">
+      <p class="journal-bar-text">Norbert is walking a healing path, one brave pawstep at a time. Follow his journal for gentle updates from the forest.</p>
+      <a href="norbert-healing-path.html" class="journal-bar-btn">Read the Journal</a>
+    </div>
+  </div>
 
   <!-- ====== HERO ====== -->
   <section class="hero">
@@ -97,7 +151,7 @@
     <div class="container">
       <div class="book-showcase fade-in">
         <div class="book-cover">
-          <img src="images/tug-of-war-lesson-cover.jpg" alt="The Tug of War Lesson book cover - a watercolor illustration of a girl and Norbert sharing a gentle moment by the water, by Susan Higgins">
+          <img src="images/norbert-social-preview.jpg" alt="The Tug of War Lesson book cover - a watercolor illustration of a girl and Norbert sharing a gentle moment by the water, by Susan Higgins">
         </div>
         <div class="book-details">
           <p class="book-genre">Featured Book</p>
@@ -256,6 +310,7 @@
         <div class="footer-links">
           <h4>Connect</h4>
           <ul>
+            <li><a href="norbert-healing-path.html">Journal</a></li>
             <li><a href="testimonials.html">Testimonials</a>
                 <a href="contact.html">Contact</a></li>
             <li><a href="press.html">Press</a>
