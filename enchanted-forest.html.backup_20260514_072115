@@ -49,16 +49,10 @@
     </div>
   </header>
 
-  <style>
-    @media (max-width: 480px) {
-      .page-hero p { font-size: 1.05rem; }
-    }
-  </style>
-
   <section class="page-hero">
     <div class="container">
       <h1>The Enchanted Forest</h1>
-      <p>Where kindness is the deepest kind of strength</p>
+      <p>A world where kindness is the strongest thing there is</p>
     </div>
   </section>
 
@@ -83,7 +77,7 @@
       <div class="characters-grid">
         <div class="character-card fade-in">
           <div class="character-avatar">
-            <img src="images/norbert-forest-portrait.jpg" alt="Norbert Barkah portrait, smiling" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%; border-radius: 50%;">
+            <img src="images/norbert-character.jpg" alt="Norbert Barkah portrait, smiling" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%; border-radius: 50%;">
           </div>
           <h3>Norbert</h3>
           <p>Norbert Barkah is the gentle heart of the forest. Wise, loyal, and deeply feeling, he moves through the world with quiet presence and a kindness that helps others feel safe enough to grow.</p>
@@ -145,46 +139,6 @@
     </div>
   </section>
 
-
-  <!-- ====== CINEMATIC PHOTO STRIP ====== -->
-  <section style="position: relative; width: 100%; height: 520px; overflow: hidden;">
-    <img
-      src="images/norbert-bridge.jpg"
-      alt="Norbert sitting on a wooden bridge looking out at the still water, covered bridge in the background"
-      style="width: 100%; height: 100%; object-fit: cover; object-position: center 35%;">
-    <div style="
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, rgba(44,74,62,0.25) 0%, rgba(44,74,62,0.78) 60%, rgba(44,74,62,0.88) 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;">
-      <div style="max-width: 720px;">
-        <blockquote style="
-          font-family: 'Cormorant Garamond', serif;
-          font-size: clamp(1.6rem, 3vw, 2.2rem);
-          font-style: italic;
-          font-weight: 500;
-          color: #FAF6F0;
-          line-height: 1.55;
-          margin: 0 0 1.25rem 0;">
-          "In the forest and in life, I have learned to trust the dog."
-        </blockquote>
-        <cite style="
-          font-family: 'Nunito', sans-serif;
-          font-size: 0.9rem;
-          color: #C4A35A;
-          letter-spacing: 0.12em;
-          text-transform: uppercase;
-          font-style: normal;">
-          Mama Sue
-        </cite>
-      </div>
-    </div>
-  </section>
-
   <footer class="site-footer">
     <div class="container">
       <div class="footer-inner">
@@ -211,10 +165,9 @@
         <div class="footer-links">
           <h4>Connect</h4>
           <ul>
-            <li><a href="https://journal.norbertbarkah.com">Journal</a></li>
-            <li><a href="testimonials.html">Testimonials</a></li>
-            <li><a href="norbert-fund.html">Healing Fund</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="norbert-healing-path.html">Journal</a></li>
+            <li><a href="testimonials.html">Testimonials</a>
+                <a href="contact.html">Contact</a></li>
             <li><a href="press.html">Press</a>
         <a href="friends.html">Friends</a></li>
             <li><a href="#">School Visits</a></li>

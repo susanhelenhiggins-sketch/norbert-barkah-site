@@ -137,7 +137,7 @@
     <div class="fade-in">
       <h2 style="color: #FAF6F0; font-family: var(--font-display);">Be the First to Know</h2>
       <p style="color: rgba(250,246,240,0.8); max-width: 560px; margin: 0.75rem auto 1.5rem;">The Tug of War Lesson Parent/Teacher Edition is on its way. Leave your email and you will hear about it before anyone else.</p>
-      <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="b39c02fe-c067-4c51-a37d-0f26be4dcef7"></script>
+      <script async data-uid="a2fad3eec0" src="https://norbert-barkah.kit.com/a2fad3eec0/index.js"></script>
     </div>
   </div>
 </section>
@@ -266,9 +266,8 @@
           <h4>Connect</h4>
           <ul>
             <li><a href="https://journal.norbertbarkah.com">Journal</a></li>
-            <li><a href="testimonials.html">Testimonials</a></li>
-            <li><a href="norbert-fund.html">Healing Fund</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="testimonials.html">Testimonials</a>
+                <a href="contact.html">Contact</a></li>
             <li><a href="press.html">Press</a>
         <a href="friends.html">Friends</a></li>
             <li><a href="#">School Visits</a></li>

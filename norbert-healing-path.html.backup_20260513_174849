@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Norbert's Healing Path | Norbert Barkah</title>
+  <meta name="description" content="Gentle updates from Norbert's healing journey. The tender days, the brave days, the small victories, and the love carrying us through.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Norbert Barkah">
+  <meta property="og:title" content="Norbert's Healing Path | Norbert Barkah">
+  <meta property="og:description" content="Gentle updates from Norbert's healing journey. The tender days, the brave days, the small victories, and the love carrying us through.">
+  <meta property="og:image" content="https://norbertbarkah.com/images/norbert-social-preview.jpg">
+  <meta property="og:url" content="https://norbertbarkah.com/norbert-healing-path.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Norbert's Healing Path | Norbert Barkah">
+  <meta name="twitter:description" content="Gentle updates from Norbert's healing journey. The tender days, the brave days, the small victories, and the love carrying us through.">
+  <meta name="twitter:image" content="https://norbertbarkah.com/images/norbert-social-preview.jpg">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* ---- Healing Path page-specific styles ---- */
+
+    .healing-hero {
+      background-image: url('images/enchanted-forest-hero.jpg');
+      background-size: cover;
+      background-position: center;
+      min-height: 460px; padding-top: 140px;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .healing-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(30, 55, 45, 0.82);
+    }
+
+    .healing-hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 4.5rem 2rem;
+      max-width: 780px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .healing-hero-content h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      color: #FAF6F0;
+      font-weight: 600;
+      margin-bottom: 1.75rem;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+    }
+
+    .healing-intro {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.1rem;
+      line-height: 1.95;
+      color: rgba(250, 246, 240, 0.90);
+      text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+      max-width: 660px;
+      margin: 0 auto 1.5rem;
+    }
+
+
+    .healing-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.2rem;
+      color: rgba(196, 163, 90, 0.88);
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.75;
+    }
+    .gold-rule {
+      border: none;
+      border-top: 1px solid rgba(196, 163, 90, 0.45);
+      width: 80px;
+      margin: 1.75rem auto;
+    }
+
+    .journal-section {
+      background: #FAF6F0;
+      padding: 5rem 0;
+    }
+
+    .journal-entries {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .journal-entry {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 2.75rem 3rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 2px 18px rgba(44, 74, 62, 0.07);
+      border-left: 4px solid #C4A35A;
+    }
+
+    .entry-date {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.9rem;
+      color: #C4A35A;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+
+    .entry-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.85rem;
+      color: #2C4A3E;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+      line-height: 1.3;
+    }
+
+    .entry-body p {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.88;
+      color: #3a3a3a;
+      margin-bottom: 1rem;
+    }
+
+    .entry-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .healing-closing {
+      background: #2C4A3E;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .healing-closing p {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1.2rem, 2.5vw, 1.45rem);
+      color: rgba(250, 246, 240, 0.88);
+      max-width: 620px;
+      margin: 0 auto;
+      line-height: 1.85;
+    }
+
+    .healing-closing .closing-credit {
+      font-family: 'Nunito', sans-serif;
+      font-style: normal;
+      font-size: 0.9rem;
+      color: rgba(196, 163, 90, 0.75);
+      margin-top: 1.25rem;
+    }
+
+    @media (max-width: 700px) {
+      .journal-entry {
+        padding: 1.75rem 1.5rem;
+      }
+
+      .journal-section {
+        padding: 3.5rem 0;
+      }
+    }
+
+    /* ---- Journal layout: sidebar + entries ---- */
+    .journal-layout {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 3rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      align-items: start;
+    }
+
+    .journal-sidebar {
+      position: sticky;
+      top: 100px;
+    }
+
+    .journal-sidebar-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.85rem;
+      color: #C4A35A;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .journal-sidebar-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .journal-sidebar-list li {
+      margin-bottom: 0.85rem;
+      border-left: 2px solid rgba(196, 163, 90, 0.25);
+      padding-left: 0.85rem;
+    }
+
+    .journal-sidebar-list a {
+      text-decoration: none;
+      display: block;
+    }
+
+    .journal-sidebar-list .sidebar-entry-date {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.75rem;
+      color: #C4A35A;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 0.1rem;
+    }
+
+    .journal-sidebar-list .sidebar-entry-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      color: #2C4A3E;
+      line-height: 1.3;
+    }
+
+    .journal-sidebar-list a:hover .sidebar-entry-title {
+      color: #C4A35A;
+    }
+
+    /* ---- Mobile collapsible toggle ---- */
+    .journal-mobile-toggle {
+      display: none;
+    }
+
+    .journal-toggle-btn {
+      background: none;
+      border: 1px solid rgba(196, 163, 90, 0.6);
+      color: #2C4A3E;
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.9rem;
+      padding: 0.6rem 1.25rem;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+
+    .journal-toggle-list {
+      display: none;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 2rem;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(44, 74, 62, 0.07);
+      overflow: hidden;
+    }
+
+    .journal-toggle-list.open {
+      display: block;
+    }
+
+    .journal-toggle-list li a {
+      display: block;
+      padding: 0.85rem 1.25rem;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(196, 163, 90, 0.12);
+    }
+
+    .journal-toggle-list li:last-child a {
+      border-bottom: none;
+    }
+
+    .journal-toggle-list .toggle-entry-date {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.75rem;
+      color: #C4A35A;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      display: block;
+    }
+
+    .journal-toggle-list .toggle-entry-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      color: #2C4A3E;
+    }
+
+    /* ---- Status messages ---- */
+    .journal-status {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      color: #7A9E8E;
+      text-align: center;
+      padding: 3rem 0;
+      line-height: 1.7;
+    }
+
+    /* ---- Mobile overrides ---- */
+    @media (max-width: 900px) {
+      .journal-layout {
+        grid-template-columns: 1fr;
+        max-width: 760px;
+      }
+      .journal-sidebar {
+        display: none;
+      }
+      .journal-mobile-toggle {
+        display: block;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ====== HEADER ====== -->
+  <header class="site-header">
+    <div class="header-inner container">
+      <a href="index.html" class="header-brand">
+        <img src="images/logo.jpg" alt="Norbert Barkah logo" class="header-logo">
+        <span class="header-title">Norbert Barkah</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="books.html">Books</a>
+        <a href="enchanted-forest.html">Enchanted Forest</a>
+        <a href="storytime.html">Storytime</a>
+        <a href="press.html">Press</a>
+        <a href="friends.html">Friends</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ====== HERO ====== -->
+  <section class="healing-hero">
+    <div class="healing-hero-overlay"></div>
+    <div class="healing-hero-content">
+      <h1>Norbert's Healing Path</h1>
+      <p class="healing-subtitle">Updates from the forest as Norbert walks through his healing journey.</p>
+      <p class="healing-intro">This is where I'll share gentle updates from Norbert's healing journey, the tender days, the brave days, the questions, the small victories, and the love carrying us through.</p>
+      <hr class="gold-rule">
+      <p class="healing-intro">Not every update will be easy, but this path is still filled with light, kindness, and the steady pawprints of everyone walking beside him.</p>
+    </div>
+  </section>
+
+  <!-- ====== JOURNAL ENTRIES ====== -->
+  <section class="journal-section">
+    <div class="container">
+
+      <!-- Mobile collapsible entry list -->
+      <div class="journal-mobile-toggle">
+        <button class="journal-toggle-btn" id="journal-toggle-btn" aria-expanded="false">
+          Jump to an entry
+        </button>
+        <ul class="journal-toggle-list" id="journal-toggle-list" aria-hidden="true"></ul>
+      </div>
+
+      <!-- Desktop sidebar + entries grid -->
+      <div class="journal-layout">
+        <aside class="journal-sidebar" aria-label="Journal entry list">
+          <p class="journal-sidebar-heading">Entries</p>
+          <ul class="journal-sidebar-list" id="journal-sidebar-list"></ul>
+        </aside>
+        <div class="journal-entries" id="journal-entries">
+          <p class="journal-status" id="journal-status">Loading Norbert's journal...</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====== CLOSING STRIP ====== -->
+  <section class="healing-closing">
+    <p>"The forest always makes room for those who walk gently through it."</p>
+    <p class="closing-credit">Walking beside Norbert, one day at a time.</p>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">&copy; 2025 Norbert Barkah. All rights reserved.</p>
+      <p class="footer-credit"><a href="https://www.heartsakephotography.com/" target="_blank" rel="noopener">Photography by Faith Hamberg, Heartsake Photography</a></p>
+    </div>
+  </footer>
+
+
+  <script>
+    // ---- Journal fetch and render ----
+    // All API-provided content rendered via createElement + textContent.
+    // innerHTML used only for fixed hardcoded status messages.
+
+    const API_URL = 'https://tracker.norbertbarkah.com/api/journal';
+
+    // Format YYYY-MM-DD as "May 13, 2026"
+    function formatDate(raw) {
+      if (!raw) return '';
+      const parts = raw.split('-');
+      if (parts.length !== 3) return raw;
+      const d = new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
+      if (isNaN(d.getTime())) return raw;
+      return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    }
+
+    // Safe ID: prefix entry uuid or integer id
+    function safeEntryId(id) {
+      // Replace anything that is not alphanumeric or hyphen
+      const clean = String(id).replace(/[^a-zA-Z0-9-]/g, '-');
+      return 'journal-entry-' + clean;
+    }
+
+    // Build one sidebar/toggle list item using textContent only
+    function buildNavItem(entry, listClass) {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = '#' + safeEntryId(entry.id);
+
+      const dateSpan = document.createElement('span');
+      dateSpan.textContent = formatDate(entry.date);
+
+      const titleSpan = document.createElement('span');
+      titleSpan.textContent = entry.title || '';
+
+      if (listClass === 'sidebar') {
+        dateSpan.className = 'sidebar-entry-date';
+        titleSpan.className = 'sidebar-entry-title';
+      } else {
+        dateSpan.className = 'toggle-entry-date';
+        titleSpan.className = 'toggle-entry-title';
+      }
+
+      a.appendChild(dateSpan);
+      a.appendChild(titleSpan);
+      li.appendChild(a);
+      return li;
+    }
+
+    // Build one journal entry article using createElement + textContent only
+    function buildEntry(entry) {
+      const article = document.createElement('article');
+      article.className = 'journal-entry fade-in';
+      article.id = safeEntryId(entry.id);
+
+      const dateDiv = document.createElement('div');
+      dateDiv.className = 'entry-date';
+      dateDiv.textContent = formatDate(entry.date);
+
+      const titleH2 = document.createElement('h2');
+      titleH2.className = 'entry-title';
+      titleH2.textContent = entry.title || '';
+
+      const bodyDiv = document.createElement('div');
+      bodyDiv.className = 'entry-body';
+
+      // Split body on double newlines into paragraphs.
+      // Each paragraph rendered with textContent -- no HTML injection.
+      const rawBody = entry.body || '';
+      const paragraphs = rawBody.split(/
+\s*
+/);
+      paragraphs.forEach(function(chunk) {
+        const trimmed = chunk.trim();
+        if (!trimmed) return;
+        const p = document.createElement('p');
+        p.textContent = trimmed;
+        bodyDiv.appendChild(p);
+      });
+
+      // If body had no double newlines, split on single newlines
+      if (bodyDiv.children.length === 0 && rawBody.trim()) {
+        const lines = rawBody.split('
+');
+        lines.forEach(function(line) {
+          const trimmed = line.trim();
+          if (!trimmed) return;
+          const p = document.createElement('p');
+          p.textContent = trimmed;
+          bodyDiv.appendChild(p);
+        });
+      }
+
+      // Fallback: if still empty, render as single paragraph
+      if (bodyDiv.children.length === 0 && rawBody.trim()) {
+        const p = document.createElement('p');
+        p.textContent = rawBody.trim();
+        bodyDiv.appendChild(p);
+      }
+
+      article.appendChild(dateDiv);
+      article.appendChild(titleH2);
+      article.appendChild(bodyDiv);
+      return article;
+    }
+
+    // Main fetch and render
+    async function loadJournal() {
+      const entriesEl = document.getElementById('journal-entries');
+      const statusEl = document.getElementById('journal-status');
+      const sidebarList = document.getElementById('journal-sidebar-list');
+      const toggleList = document.getElementById('journal-toggle-list');
+
+      try {
+        const response = await fetch(API_URL);
+        if (!response.ok) throw new Error('API returned ' + response.status);
+        const entries = await response.json();
+
+        // Remove loading message
+        if (statusEl) statusEl.remove();
+
+        if (!Array.isArray(entries) || entries.length === 0) {
+          // Empty state -- hardcoded string, innerHTML is safe here
+          const msg = document.createElement('p');
+          msg.className = 'journal-status';
+          msg.textContent = "Norbert's journal entries are on the way. Check back soon.";
+          entriesEl.appendChild(msg);
+          return;
+        }
+
+        // Render entries and nav lists
+        entries.forEach(function(entry) {
+          // Entry article
+          entriesEl.appendChild(buildEntry(entry));
+          // Sidebar nav item
+          sidebarList.appendChild(buildNavItem(entry, 'sidebar'));
+          // Mobile toggle nav item
+          toggleList.appendChild(buildNavItem(entry, 'toggle'));
+        });
+
+      } catch (err) {
+        // Error state -- hardcoded string, innerHTML is safe here
+        if (statusEl) {
+          statusEl.textContent = 'The forest is quiet right now. Please try again in a moment.';
+        }
+        console.error('Journal fetch error:', err);
+      }
+    }
+
+    // Mobile toggle button
+    document.addEventListener('DOMContentLoaded', function() {
+      loadJournal();
+
+      const btn = document.getElementById('journal-toggle-btn');
+      const list = document.getElementById('journal-toggle-list');
+      if (btn && list) {
+        btn.addEventListener('click', function() {
+          const isOpen = list.classList.contains('open');
+          list.classList.toggle('open', !isOpen);
+          btn.setAttribute('aria-expanded', String(!isOpen));
+          list.setAttribute('aria-hidden', String(isOpen));
+          btn.textContent = isOpen ? 'Jump to an entry' : 'Close entry list';
+        });
+      }
+    });
+  </script>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
