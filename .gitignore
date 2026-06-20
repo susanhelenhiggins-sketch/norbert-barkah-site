@@ -1,6 +1,20 @@
-# Exclude original image backups
-images/originals-backup/
+# Backup files created by patch scripts
+_backups/
+*.bak_*
+*.navbak*
+*.footbak*
+*.cleanbak*
+*.fixbak*
+*.dgbak*
+*.sagebak*
+*.boldbak*
+*.btnbak*
+*.btntxtbak*
+*.herobtnbak*
+*.eyebrowbak*
+*.greenbak*
+*.cropbak*
+*.backup_*
 
 # macOS
 .DS_Store
-_backups/
