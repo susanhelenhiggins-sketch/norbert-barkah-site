@@ -37,7 +37,7 @@
   }
     /* ---- Journal callout section (desktop) ---- */
     .journal-callout {
-      background: #f0ece4;
+      background: #2C4A3E;
       border-top: 1px solid rgba(196, 163, 90, 0.25);
       border-bottom: 1px solid rgba(196, 163, 90, 0.25);
       padding: 2.5rem 2rem;
@@ -62,7 +62,7 @@
     .journal-callout-text {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.4rem;
-      color: #2C4A3E;
+      color: #FAF6F0;
       margin: 0;
       line-height: 1.65;
     }
@@ -81,21 +81,29 @@
     .journal-callout-btn:hover {
       background: #3a6352;
     }
+    /* Button on green journal background */
+    .journal-callout:not(.journal-callout--fund) .journal-callout-btn {
+      background: #C4A35A;
+      color: #1a1a1a;
+    }
+    .journal-callout:not(.journal-callout--fund) .journal-callout-btn:hover {
+      background: #a8893e;
+    }
 
     /* ---- Healing Fund callout -- dark green variant ---- */
     .journal-callout--fund {
-      background: #2C4A3E;
+      background: #f0ece4;
       border-top: none;
       border-bottom: none;
     }
     .journal-callout--fund .journal-callout-eyebrow {
-      color: #D4BC82;
+      color: #8A6F3A;
       font-size: 0.9rem;
       letter-spacing: 0.15em;
       font-weight: 700;
     }
     .journal-callout--fund .journal-callout-text {
-      color: #FFFFFF;
+      color: #2C4A3E;
     }
 
 
@@ -182,11 +190,11 @@
   </section>
 
   <!-- ====== JOURNAL CALLOUT ====== -->
-  <div class="journal-callout">
+  <div class="journal-callout journal-callout--fund">
     <div class="journal-callout-inner">
-      <p class="journal-callout-eyebrow">A gentle update from the forest</p>
-      <p class="journal-callout-text">Norbert is walking a healing path, one brave pawstep at a time. Follow his journal for gentle updates from the forest.</p>
-      <a href="https://journal.norbertbarkah.com" class="journal-callout-btn">Read the Journal</a>
+      <p class="journal-callout-eyebrow">A note from Mama Sue</p>
+      <p class="journal-callout-text">In spring 2026, Norbert was diagnosed with lymphoma. He is receiving treatment and meeting each day with the steady, quiet courage that has always been his way. If you would like to walk alongside him, his Healing Fund is a place to begin.</p>
+      <a href="norbert-fund.html" class="btn btn--primary">Visit Norbert's Healing Fund</a>
     </div>
   </div>
 
@@ -215,11 +223,11 @@
   </section>
 
   <!-- ====== HEALING FUND CALLOUT ====== -->
-  <div class="journal-callout journal-callout--fund">
+  <div class="journal-callout">
     <div class="journal-callout-inner">
-      <p class="journal-callout-eyebrow">A note from Mama Sue</p>
-      <p class="journal-callout-text">In spring 2026, Norbert was diagnosed with lymphoma. He is receiving treatment and meeting each day with the steady, quiet courage that has always been his way. If you would like to walk alongside him, his Healing Fund is a place to begin.</p>
-      <a href="norbert-fund.html" class="btn btn--primary">Visit Norbert's Healing Fund</a>
+      <p class="journal-callout-eyebrow">A gentle update from the forest</p>
+      <p class="journal-callout-text">Norbert is walking a healing path, one brave pawstep at a time. Follow his journal for gentle updates from the forest.</p>
+      <a href="https://journal.norbertbarkah.com" class="journal-callout-btn">Read the Journal</a>
     </div>
   </div>
 
